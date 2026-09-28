@@ -1,0 +1,161 @@
+body{
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right, rgb(254, 61, 158), rgb(109, 4, 109));
+    background-repeat: no-repeat;
+}
+
+*{
+    box-sizing: border-box;
+}
+.tabs{
+    overflow: hidden;
+}
+
+.columns{
+    float: left;
+    width: calc(20% - 40px); /* each thing is given 20% of the screen width minus 40px because of the left and right margins*/
+    margin: 20px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    height: 70px;
+    background-color: yellow;
+    font-size: clamp(16px, 3vw, 40px);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.columns:hover{
+    cursor: pointer;
+}
+
+.image{
+    float: left;
+    margin-left: 20px;
+    width: 58%;
+}
+
+.image img{
+    width: 33%;
+    height: 415px;
+}
+
+.burger{
+    float: right;
+    background-color: yellow;
+    margin-right: 23px;
+    height: auto;
+    min-height: 190px;
+    width: 40%;
+    text-align: center;
+    font-size: clamp(20px, 3vw, 40px);} /* clamp makes it so the text can't go under 20px, preferred size is 3vw, and the font can't go over 40px. 
+                                               That way the text isn't too small or too big.*/
+
+.wine{
+    float: right;
+    background-color: yellow;
+    margin-right: 23px;
+    margin-top: 40px;
+    width: 40%;
+    height: auto;
+    min-height: 180px;
+    text-align:center;
+    font-size: clamp(20px, 3vw, 40px);
+}
+
+.annoying{
+    height: 190px;
+}
+
+.price h3, .price p, .wow h3, .wow p{
+    margin: 0;
+}
+
+.price p, .wow p{
+    font-size: 25px;
+}
+
+.price, .wow{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.describe{
+    clear: both;
+    overflow: hidden;
+}
+
+.des{
+    float: left;
+    margin: 50px 2.30%;
+    width: 20%;
+    height: 400px;
+    background-color: white;
+}
+
+.emoji{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+.d, .info{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.featured{
+    clear: both;
+    background-color: white;
+    height: 500px;
+    margin-left: 57px;
+    margin-right: 100px;
+}
+
+.nope{
+    float: left;
+    height: 500px;
+    margin-left: 300px;
+}
+
+.text{
+    text-align: left;
+    margin: 0 auto;
+    width: 400px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.learn{
+    background-color: yellow;
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    font-size: 30px;
+}
+
+.learn:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 700px){ /* Media changes the css based on*/
+    .columns,
+    .image,
+    .burger,
+    .wine{
+        float: none;
+        width: calc(100% - 40px); /* On smaller screens it uses the entire width then minus the 40px*/
+        margin: 20px;
+    }
+
+    .columns{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
